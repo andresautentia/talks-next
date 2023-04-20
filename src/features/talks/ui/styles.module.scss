@@ -1,0 +1,217 @@
+.talks {
+    background-color: var(--light-gray-color);
+    .talks-container {
+        padding: var(--section-padding) var(--container-padding);
+        max-width: var(--container-width);
+        margin: 0 auto;
+        .selectors {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            margin-top: 50px;
+            .selector-container {
+                > * {
+                    display: block;
+                }
+                select {
+                    width: 200px;
+                    padding: 10px;
+                    border-radius: 0px;
+                    margin-top: 10px;
+                    border: 0px;
+                    border-bottom: 2px solid var(--secondary-color);
+                    outline: 0px;
+                    font-size: 16px;
+                }
+                label {
+                    font-weight: 600;
+                }
+            }
+        }
+        .tabs-selectors {
+            button {
+                border: 0px;
+                font-size: 20px;
+                padding: 10px 30px;
+                background-color: var(--main-color);
+                color: #fff;
+                cursor: pointer;
+                &:nth-child(2) {
+                    background-color: var(--secondary-color);
+                }
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+        .tab {
+            border: 1px dashed #e5e5e5;
+            padding: 60px;
+            background-color: #fff;
+            &.none {
+                display: none;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                th {
+                    font-size: 25px;
+                    padding: 20px 30px;
+                    text-align: left;
+                    color: #fff;
+                    font-weight: 700;
+                    &:nth-child(2) {
+                        color: var(--complementary-color1);
+                    }
+                    &:nth-child(3) {
+                        color: var(--complementary-color2);
+                    }
+                }
+                tr {
+                    border-bottom: 1px dashed #e5e5e5;
+                    td {
+                        &:first-child {
+                            padding: 10px;
+                            color: var(--gray-color);
+                            background-color: var(--table-cell1);
+                            text-align: center;
+                            font-weight: 700;
+                            font-size: 20px;
+                            width: 200px;
+                            height: 130px;
+                        }
+                        &:not(:first-child) {
+                            padding: 30px;
+                            p {
+                                margin: 0px;
+                            }
+                            h3 {
+                                margin: 5px 0px;
+                                font-size: 18px;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                    &:nth-child(2n) {
+                        td:first-child {
+                            background-color: var(--table-cell2);
+                        }
+                    }
+                }
+            }
+            &.tab-list {
+                h3 {
+                    font-size: 25px;
+                    text-align: left;
+                    font-weight: 700;
+                    color: var(--complementary-color1);
+                    margin-top: 0px;
+                    &:nth-child(3) {
+                        margin-top: 50px;
+                    }
+                    &.no-talks {
+                        font-size: 18px;
+                        margin-top: 20px;
+                        font-weight: 100;
+                        color: #000;
+                    }
+                }
+                ul {
+                    padding: 0px;
+                    li {
+                        list-style: none;
+                        padding: 0px;
+                        display: flex;
+                        border-bottom: 1px dashed #e5e5e5;
+                        .hour {
+                            flex-direction: column;
+                            justify-content: center;
+                            display: flex;
+                            max-width: 200px;
+                            width: 100%;
+                            color: var(--gray-color);
+                            text-align: center;
+                            font-weight: 700;
+                            font-size: 20px;
+                        }
+                        .list-content {
+                            padding: 30px;
+                            p,
+                            small {
+                                margin: 0px;
+                            }
+                            h4 {
+                                margin: 5px 0px;
+                                font-size: 18px;
+                                font-weight: 700;
+                            }
+                        }
+                        &:nth-child(2n + 1) {
+                            .hour {
+                                background-color: var(--table-cell1);
+                            }
+                        }
+                        &:nth-child(2n) {
+                            .hour {
+                                background-color: var(--table-cell2);
+                            }
+                        }
+                        &:first-child {
+                            border-top: 1px dashed #e5e5e5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .talks {
+        .talks-container {
+            .tab {
+                padding: 60px 15px;
+                &.tab-table {
+                    overflow-x: scroll;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .talks {
+        .talks-container {
+            .tab {
+                table {
+                    width: 500px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .talks {
+        .talks-container {
+            .selectors {
+                flex-wrap: wrap;
+                .selector-container {
+                    width: 100%;
+                    select {
+                        width: 100%;
+                    }
+                }
+            }
+            .tab.tab-list {
+                ul {
+                    li {
+                        .hour {
+                            max-width: 120px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
