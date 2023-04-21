@@ -62,7 +62,7 @@ export const Talks: React.FC = () => {
                     <TopicsSelector setSelectedTopic={(topic: number) => setTopicSelected(topic)} />
                     <SpeakersSelector setSelectedSpeaker={(speaker: number) => setSpeakerSelected(speaker)} />
                 </div>
-                <div className={cx('tabs-selectors')}>
+                <div data-test-id="tabs-selector" className={cx('tabs-selectors')}>
                     <button type="button" onClick={() => setTabSelected(1)}>
                         Tabla
                     </button>
@@ -70,7 +70,10 @@ export const Talks: React.FC = () => {
                         Lista
                     </button>
                 </div>
-                <div className={`${cx('tab', 'tab-table')} ${tabSelected === 2 && cx('none')}`}>
+                <div
+                    data-test-id="tab-table"
+                    className={`${cx('tab', 'tab-table')} ${tabSelected === 2 && cx('none')}`}
+                >
                     {talks.length > 0 ? (
                         <table>
                             <thead>
@@ -101,7 +104,7 @@ export const Talks: React.FC = () => {
                         <h3>No hay charlas para los filtros seleccionados.</h3>
                     )}
                 </div>
-                <div className={`${cx('tab', 'tab-list')} ${tabSelected === 1 && cx('none')}`}>
+                <div data-test-id="tab-list" className={`${cx('tab', 'tab-list')} ${tabSelected === 1 && cx('none')}`}>
                     {talks.length > 0 ? (
                         halls.map(hall => {
                             return (
