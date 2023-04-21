@@ -1,6 +1,9 @@
 import React from 'react'
 import { useGetTopics } from './hooks/useGetTopics'
+import classNames from 'classnames/bind'
+import styles from '../../talks/ui/styles.module.scss'
 
+let cx = classNames.bind(styles)
 interface TopicsSelectorProps {
     setSelectedTopic: Function
 }
@@ -9,7 +12,7 @@ const TopicsSelector: React.FC<TopicsSelectorProps> = ({ setSelectedTopic }) => 
     const { selectOptions } = useGetTopics()
 
     return (
-        <div className="selector-container">
+        <div className={cx('selector-container')}>
             <label htmlFor="topic-selector">Temática</label>
             <select
                 data-testid="topic-selector"

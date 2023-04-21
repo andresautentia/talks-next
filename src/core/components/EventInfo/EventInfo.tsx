@@ -5,7 +5,7 @@ import styles from './styles.module.scss'
 import classNames from 'classnames/bind'
 import Image from 'next/image'
 
-let cx = classNames.bind(styles)
+const cx = classNames.bind(styles)
 
 export const EventInfo: React.FC = () => {
     return (

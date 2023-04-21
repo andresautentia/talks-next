@@ -1,5 +1,9 @@
 import React from 'react'
 import { useGetSpeakers } from './hooks/useGetSpeakers'
+import classNames from 'classnames/bind'
+import styles from '../../talks/ui/styles.module.scss'
+
+let cx = classNames.bind(styles)
 
 interface SpeakersSelectorProps {
     setSelectedSpeaker: Function
@@ -9,7 +13,7 @@ const SpeakersSelector: React.FC<SpeakersSelectorProps> = ({ setSelectedSpeaker 
     const { selectOptions } = useGetSpeakers()
 
     return (
-        <div className="selector-container">
+        <div className={cx('selector-container')}>
             <label htmlFor="speaker-selector">Ponente</label>
             <select
                 data-testid="speaker-selector"

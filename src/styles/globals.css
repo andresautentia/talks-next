@@ -112,9 +112,9 @@ a {
 
 :root {
     --main-color: #081798;
-    --secondary-color: #0040B0;
-    --complementary-color1: #505FE5;
-    --complementary-color2: #3C47AA;
+    --secondary-color: #0040b0;
+    --complementary-color1: #505fe5;
+    --complementary-color2: #3c47aa;
     --table-cell1: #f3f3f3;
     --table-cell2: #d9d9d9;
     --light-blue-color: #0041b02c;
@@ -127,8 +127,12 @@ a {
     --container-padding: 15px;
 }
 
+body {
+    margin: 0;
+}
+
 * {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
@@ -141,7 +145,7 @@ p {
 }
 
 h2 {
-    margin: 0px;
+    margin: 0;
     color: var(--main-color);
     font-size: var(--font-size-xl);
     line-height: var(--font-size-xl);
