@@ -16,21 +16,21 @@
                 select {
                     width: 200px;
                     padding: 10px;
-                    border-radius: 0px;
+                    border-radius: 0;
                     margin-top: 10px;
-                    border: 0px;
+                    border: 0;
                     border-bottom: 2px solid var(--secondary-color);
-                    outline: 0px;
+                    outline: 0;
                     font-size: 16px;
                 }
                 label {
-                    font-weight: 600;
+                    font-weight: 500;
                 }
             }
         }
         .tabs-selectors {
             button {
-                border: 0px;
+                border: 0;
                 font-size: 20px;
                 padding: 10px 30px;
                 background-color: var(--main-color);
@@ -83,10 +83,10 @@
                         &:not(:first-child) {
                             padding: 30px;
                             p {
-                                margin: 0px;
+                                margin: 0;
                             }
                             h3 {
-                                margin: 5px 0px;
+                                margin: 5px 0;
                                 font-size: 18px;
                                 font-weight: 700;
                             }
@@ -105,7 +105,7 @@
                     text-align: left;
                     font-weight: 700;
                     color: var(--complementary-color1);
-                    margin-top: 0px;
+                    margin-top: 0;
                     &:nth-child(3) {
                         margin-top: 50px;
                     }
@@ -117,10 +117,10 @@
                     }
                 }
                 ul {
-                    padding: 0px;
+                    padding: 0;
                     li {
                         list-style: none;
-                        padding: 0px;
+                        padding: 0;
                         display: flex;
                         border-bottom: 1px dashed #e5e5e5;
                         .hour {
@@ -138,10 +138,10 @@
                             padding: 30px;
                             p,
                             small {
-                                margin: 0px;
+                                margin: 0;
                             }
                             h4 {
-                                margin: 5px 0px;
+                                margin: 5px 0;
                                 font-size: 18px;
                                 font-weight: 700;
                             }

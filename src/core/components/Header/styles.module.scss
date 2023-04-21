@@ -1,9 +1,9 @@
 .header {
-    box-shadow: 0px 1px 10px #404040;
+    box-shadow: 0 1px 10px #404040;
     position: fixed;
     width: 100%;
     background-color: #fff;
-    top: 0px;
+    top: 0;
     z-index: 10;
     .header-container {
         max-width: var(--container-width);
@@ -21,9 +21,9 @@
         }
         nav {
             ul {
-                padding: 0px;
+                padding: 0;
                 list-style: none;
-                margin: 0px;
+                margin: 0;
                 display: flex;
                 gap: 30px;
                 a {
@@ -49,7 +49,7 @@
                         color: #fff;
                         padding: 10px;
                         text-transform: uppercase;
-                        font-weight: 600;
+                        font-weight: 500;
                         border-radius: 1px;
                         letter-spacing: 1px;
                         font-size: 14px;
@@ -67,7 +67,7 @@
             display: none;
             background-color: transparent;
             border: none;
-            padding: 0px;
+            padding: 0;
             span {
                 transition: transform 0.2s linear;
             }
@@ -100,16 +100,16 @@
                 top: 69px;
                 background: #303030;
                 width: 100%;
-                left: 0px;
+                left: 0;
                 display: block;
-                height: 0px;
+                height: 0;
                 visibility: hidden;
                 overflow: hidden;
                 transition: height 0.5s linear;
                 ul {
                     flex-direction: column;
                     text-align: center;
-                    gap: 0px;
+                    gap: 0;
                     a {
                         color: #fff;
                         display: flex;
@@ -129,7 +129,6 @@
                 }
             }
             button {
-                display: block;
                 display: flex;
                 flex-direction: column;
                 gap: 5px;
