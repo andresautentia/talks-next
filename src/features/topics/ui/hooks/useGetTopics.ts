@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import { useResolve } from '../../../../core/di/useResolve'
+import { useResolve } from '@/core/di/useResolve'
 import { GetTopicsQry } from '../../application/get-topics-qry'
 import { Topic } from '../../domain/topic'
-import { UseCaseService } from '../../../../core/command/use-case-service'
+import { UseCaseService } from '@/core/command/use-case-service'
 
 export const useGetTopics = () => {
     const getTopics = useResolve(GetTopicsQry)
@@ -11,10 +11,9 @@ export const useGetTopics = () => {
 
     useEffect(() => {
         useCaseService.execute(getTopics).then(topics => {
-            setSelectOptions(topics)
+            setSelectOptions(topics as Topic[])
         })
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, []) // eslint-disable-line
 
     return {
         selectOptions,

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import { useResolve } from '../../../../core/di/useResolve'
+import { useResolve } from '@/core/di/useResolve'
 import { GetSpeakerQry } from '../../application/get-speakers-qry'
 import { Speaker } from '../../domain/speaker'
-import { UseCaseService } from '../../../../core/command/use-case-service'
+import { UseCaseService } from '@/core/command/use-case-service'
 
 export const useGetSpeakers = () => {
     const getSpeakers = useResolve(GetSpeakerQry)
@@ -11,7 +11,7 @@ export const useGetSpeakers = () => {
 
     useEffect(() => {
         useCaseService.execute(getSpeakers).then(speakers => {
-            setSelectOptions(speakers)
+            setSelectOptions(speakers as Speaker[])
         })
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])

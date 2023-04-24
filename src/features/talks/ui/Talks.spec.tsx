@@ -1,5 +1,5 @@
 import 'reflect-metadata'
-import { act, render, screen, waitFor } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 import { useGetTalks } from './hooks/useGetTalks'
 import { Talks } from './Talks'
 
@@ -82,6 +82,5 @@ const setup = async (filled = true) => {
         halls: filled ? Halls : [],
     })
 
-    // eslint-disable-next-line testing-library/no-unnecessary-act
     render(<Talks />)
 }
